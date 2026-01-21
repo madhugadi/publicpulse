@@ -1,22 +1,23 @@
 FROM python:3.11-slim
 
-# Set working directory
 WORKDIR /app
 
-# Install system dependencies (optional but safe)
+# Install system deps
 RUN apt-get update && apt-get install -y gcc && rm -rf /var/lib/apt/lists/*
 
-# Copy backend requirements
+# Copy requirements
 COPY backend/requirements.txt ./requirements.txt
 
-# Install Python dependencies
+# Install Python deps
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend source code
+# Copy backend code
 COPY backend ./backend
 
-# Expose port (Render uses 10000)
+# Tell Python where "app" lives
+ENV PYTHONPATH=/app/backend
+
 EXPOSE 10000
 
-# Start FastAPI app
-CMD ["uvicorn", "backend.app.main:app", "--host", "0.0.0.0", "--port", "10000"]
+# Start FastAPI
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "10000"]
