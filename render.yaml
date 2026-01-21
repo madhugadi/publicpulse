@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: publicpulse-backend
+    env: python
+    plan: free
+    rootDir: backend
+    pythonVersion: 3.11.9
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
