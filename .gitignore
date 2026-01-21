@@ -1,0 +1,61 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+archive/
+
+# =========================
+# FastAPI / Backend
+# =========================
+backend/.env
+backend/.env.*
+backend/data/*
+!backend/data/.gitkeep
+
+# =========================
+# Node.js / Frontend
+# =========================
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/dist/
+frontend/build/
+frontend/.env*
+frontend/.vercel/
+
+# =========================
+# IDE / Tools
+# =========================
+.vscode/
+.idea/
+claude/
+*.swp
+*.swo
+*~
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# Windows system / temp
+# =========================
+nul
