@@ -1,0 +1,27 @@
+{
+  "title": "Mension House Mallesh",
+  "slug": "mension-house-mallesh",
+  "category": "movies",
+  "release_date": null,
+  "last_updated_at": "2026-03-14T08:09:04.827985",
+  "buckets": {
+    "working": [
+      "Positive responses describe aspects such as super",
+      "Positive responses describe aspects such as blockbuster",
+      "Positive responses describe aspects such as music"
+    ],
+    "mixed": [],
+    "concerns": [],
+    "resonates": [
+      "This appears to resonate with viewers interested in fans"
+    ]
+  },
+  "sentiment_counts": {
+    "working": 6,
+    "mixed": 0,
+    "concerns": 0,
+    "resonates": 4
+  },
+  "summary": "I've been hearing a lot about this latest movie. A lot of people seem to really enjoy how it looks – the visuals keep coming up. Some viewers feel the story drags in parts, though not everyone agrees on that. It's also interesting to see how some fans are really connecting with the movie. They seem to be the ones who are most invested in the story and characters. The film's music is another thing that's getting a lot of praise – people are saying it's catchy and memorable. One thing that's not entirely clear is how the movie will appeal to non-fans. Some people are saying it's too similar to other movies, while others think it's something new and exciting. It's hard to say for sure, but it's definitely worth checking out if you're a fan of the genre.",
+  "poster_url": "https://image.tmdb.org/t/p/w500/1jexjNlyvZihnYo6p6mK2oJyF9v.jpg"
+}

@@ -3,26 +3,23 @@
   "slug": "tata-harrier-ev",
   "category": "vehicles",
   "release_date": null,
-  "last_updated_at": "2026-03-14T07:44:30.241164",
+  "last_updated_at": "2026-03-14T08:09:16.645770",
   "buckets": {
     "working": [
       "Positive responses describe aspects such as best",
-      "Positive responses describe aspects such as comfortable",
-      "Positive responses describe aspects such as interior"
+      "Positive responses describe aspects such as interior",
+      "Positive responses describe aspects such as acceleration"
     ],
     "mixed": [],
-    "concerns": [
-      "Some viewers raise concerns around expensive",
-      "Some viewers raise concerns around issues"
-    ],
+    "concerns": [],
     "resonates": []
   },
   "sentiment_counts": {
-    "working": 19,
+    "working": 13,
     "mixed": 1,
-    "concerns": 6,
-    "resonates": 1
+    "concerns": 3,
+    "resonates": 0
   },
-  "summary": "Hey, I've been keeping an eye on what people are saying about this vehicle. It seems like some things are really working well for them. A lot of people seem to really enjoy how comfortable it is to drive, and they appreciate the interior design. It's clear that those aspects have been a with the audience. On the other hand, there are some concerns that are starting to come up. Some viewers feel that it's a bit too pricey, and that might be a barrier for some people. Others are mentioning some issues they've encountered, but it's hard to say if those are isolated problems or a bigger pattern. It's interesting to see how people are reacting to this vehicle. While some are loving the comfort and interior, others are worried about the cost and potential issues. That's a pretty typical split, but it's still worth paying attention to what people are saying.",
+  "summary": "So, I've been looking at what people are saying about this vehicle, and it's interesting. A lot of people seem to really enjoy how it looks – the interior design is getting a lot of praise, for example. Some folks are even saying it's one of the best-looking interiors they've seen in a long time. When it comes to performance, people are really happy with the acceleration. It seems to be picking up speed quickly, which is great for those who enjoy driving. I've also noticed that many people appreciate how it handles, which is a nice bonus. As for any reservations, some viewers do feel that the engine could be a bit more refined, but that's about it. I'm not seeing a lot of major concerns, which is a good sign.",
   "poster_url": ""
 }

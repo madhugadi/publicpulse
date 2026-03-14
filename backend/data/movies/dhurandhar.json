@@ -3,12 +3,12 @@
   "slug": "dhurandhar",
   "category": "movies",
   "release_date": null,
-  "last_updated_at": "2026-03-14T07:44:11.795208",
+  "last_updated_at": "2026-03-14T08:08:57.325310",
   "buckets": {
     "working": [
-      "Positive responses describe aspects such as music",
-      "Positive responses describe aspects such as mass",
-      "Positive responses describe aspects such as hit"
+      "Positive responses describe aspects such as super",
+      "Positive responses describe aspects such as blockbuster",
+      "Positive responses describe aspects such as music"
     ],
     "mixed": [],
     "concerns": [],
@@ -17,11 +17,11 @@
     ]
   },
   "sentiment_counts": {
-    "working": 10,
+    "working": 16,
     "mixed": 2,
     "concerns": 0,
-    "resonates": 3
+    "resonates": 4
   },
-  "summary": "So I've been keeping an eye on how audiences are reacting to this movie, and it's interesting to see what's really standing out. A lot of people seem to really enjoy the music in this film – it's been getting a lot of positive attention. Some viewers are also appreciating the visuals, saying they're really well done. There's a lot of praise for the action scenes, too – people are saying they're exciting and well-choreographed. It seems like this movie is really connecting with parents and caregivers, especially those with young kids. They're the ones who seem to be enjoying it the most, and they're recommending it to others in their situation. Not everyone is feeling that way, though – some viewers are saying it's not as engaging as they'd hoped. There's still some uncertainty about how the story is going to hold up, but so far, people seem to be enjoying the parts that are working.",
+  "summary": "So I've been checking in with people about this movie, and it seems like some things are really working well. A lot of people seem to really enjoy how it looks – the visuals keep coming up. Some folks are also loving the music – it's like it adds to the whole experience. And as for the feel, yeah, it's definitely there – people are saying it's like a big, exciting event. It's also interesting to see who's really connecting with this movie. From what I've gathered, it seems to be resonating most with families or parents with kids. They're enjoying the way it's made, and it's clear that it's been thought about with their little ones in mind. Now, I know some people might have some reservations about this movie – it's not for everyone, after all. But from what I've seen, the majority of people are really enjoying it.",
   "poster_url": "https://image.tmdb.org/t/p/w500/jvAEt2mqWdY0sUNybtVFelRzMnZ.jpg"
 }

@@ -3,11 +3,12 @@
   "slug": "mrithyunjay",
   "category": "movies",
   "release_date": null,
-  "last_updated_at": "2026-03-14T07:44:08.468176",
+  "last_updated_at": "2026-03-14T08:08:54.750318",
   "buckets": {
     "working": [
       "Positive responses describe aspects such as super",
-      "Positive responses describe aspects such as blockbuster"
+      "Positive responses describe aspects such as blockbuster",
+      "Positive responses describe aspects such as music"
     ],
     "mixed": [],
     "concerns": [],
@@ -16,11 +17,11 @@
     ]
   },
   "sentiment_counts": {
-    "working": 4,
+    "working": 8,
     "mixed": 0,
     "concerns": 0,
-    "resonates": 2
+    "resonates": 4
   },
-  "summary": "I'm excited to share with you what's happening with this movie right now. A lot of people seem to really enjoy how it looks – the visuals keep coming up in the conversation. Some folks even describe it as a , which is saying something. It's clear that the filmmakers put a lot of work into making it look and feel big-screen. It seems like this movie is really speaking to fans, though. Viewers who are into that kind of thing are really responding to it. They're enjoying the super aspect of it, and it's clear that the filmmakers knew their audience. Some might say it's a love letter to fans, and it's definitely resonating with them. Of course, not everyone is on the same page. Some viewers feel the story drags in parts, though not everyone agrees on that. It's not a universal complaint, but it's something that's coming up in conversation. Still, the positive reactions seem to be outweighing the negative ones right now.",
+  "summary": "So I've been checking in on how people are reacting to this movie, and it seems like there are some things that are really working for them. A lot of people seem to really enjoy how it looks – the visuals keep coming up. The music is also getting a lot of praise, which isn't surprising given how catchy it is. Some viewers are even calling it a , which suggests it's resonating with audiences on a bigger level. It's also interesting to see who's really connecting with this movie. From what I've seen, it seems to be resonating with fans of the genre. People who are already invested in this type of story are really responding to it, and it's not hard to see why. The themes and characters are well-executed, and it feels like the filmmakers really know what they're doing. I don't see a lot of negative feedback about the movie's super aspect, but it's worth noting that some viewers do feel like the story drags in parts. However, it's not a universal complaint, and many people are really enjoying the ride.",
   "poster_url": "https://image.tmdb.org/t/p/w500/ugmlp0nM1CUHlnobFKO93aRbOu0.jpg"
 }

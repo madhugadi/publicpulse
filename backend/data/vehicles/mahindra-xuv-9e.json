@@ -3,7 +3,7 @@
   "slug": "mahindra-xuv-9e",
   "category": "vehicles",
   "release_date": null,
-  "last_updated_at": "2026-03-14T07:44:35.434298",
+  "last_updated_at": "2026-03-14T08:09:20.735741",
   "buckets": {
     "working": [
       "Positive responses describe aspects such as best",
@@ -11,15 +11,17 @@
       "Positive responses describe aspects such as excellent"
     ],
     "mixed": [],
-    "concerns": [],
+    "concerns": [
+      "Some viewers raise concerns around issues"
+    ],
     "resonates": []
   },
   "sentiment_counts": {
     "working": 22,
     "mixed": 0,
-    "concerns": 1,
+    "concerns": 3,
     "resonates": 0
   },
-  "summary": "So, I've been checking in with people about this new vehicle, and it seems like some things are really standing out. A lot of people seem to really enjoy how it looks – the design is definitely a strong point. They're saying it's the best in its class, which is a big deal. The way it's put together is just excellent, and people are really impressed by that. Some viewers are also giving high marks for the performance. They're saying it's fast, responsive, and just a joy to drive. It's clear that the manufacturers have done a great job with this aspect. People are really enjoying the experience of being behind the wheel. There are still some mixed opinions about the overall experience, though. Some people feel it's a bit pricey, and they're not sure if it's worth the cost. Others are saying it's just okay, that it doesn't blow them away in any particular way. But overall, the positive comments are definitely outweighing the negative ones.",
+  "summary": "So, I've been checking in with people about this vehicle, and it's clear that some aspects are really resonating with them. A lot of people seem to really enjoy how it looks – the visuals keep coming up in conversations. Some folks even mention that it's one of the best-looking vehicles in its class, which is definitely a plus. Another thing that's getting a lot of praise is how well it handles. People mention that it's excellent on the road, and that it's a joy to drive. That's great to hear, especially if you're someone who loves spending time behind the wheel. However, not everyone is entirely happy with this vehicle. Some viewers raise concerns around issues with the infotainment system – it seems like it can be a bit finicky at times. I've heard a few people mention that it's not as user-friendly as they'd like it to be.",
   "poster_url": ""
 }

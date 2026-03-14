@@ -32,15 +32,11 @@ export default function RatingBar({ sentimentCounts, size = 'sm' }: RatingBarPro
   const { bar, text, label } = getColor(score)
   const trackHeight = size === 'md' ? 'h-2.5' : 'h-1.5'
   const textSize = size === 'md' ? 'text-sm' : 'text-xs'
-  const total = sentimentCounts.working + sentimentCounts.mixed + sentimentCounts.concerns + sentimentCounts.resonates
 
   return (
     <div className="w-full">
       <div className={`flex items-center justify-between mb-1.5 ${textSize}`}>
-        <span className="text-slate-500 font-medium">
-          Audience Sentiment
-          {size === 'md' && <span className="text-slate-400 font-normal ml-1">({total} signals)</span>}
-        </span>
+        <span className="text-slate-500 font-medium">Audience Sentiment</span>
         <span className={`font-bold ${text}`}>{score}% {label}</span>
       </div>
       <div className={`w-full ${trackHeight} bg-slate-100 rounded-full overflow-hidden`}>
