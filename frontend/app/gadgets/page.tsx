@@ -6,11 +6,14 @@ export default async function GadgetsPage() {
 
   return (
     <div>
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-foreground mb-2">
+      <div className="mb-10">
+        <span className="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-3 uppercase tracking-wide">
           Gadgets
+        </span>
+        <h1 className="text-4xl font-extrabold text-slate-900 mb-2 tracking-tight">
+          Audience Reactions
         </h1>
-        <p className="text-muted">
+        <p className="text-slate-500 text-lg">
           Understanding how audiences are reacting to recent tech releases
         </p>
       </div>

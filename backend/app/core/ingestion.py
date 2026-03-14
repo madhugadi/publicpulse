@@ -16,11 +16,13 @@ Workflow:
 """
 import json
 import re
+import urllib.request
+import urllib.parse
 from datetime import datetime
 from pathlib import Path
 from typing import Optional, List, Dict, Any
 
-from app.config import MOVIES_DIR, GADGETS_DIR, VEHICLES_DIR
+from app.config import MOVIES_DIR, GADGETS_DIR, VEHICLES_DIR, TMDB_API_KEY, TMDB_BASE_URL, TMDB_IMAGE_BASE_URL
 from app.adapters import MoviesAdapter, GadgetsAdapter, VehiclesAdapter
 from app.curation import CurationEngine
 from app.rag import RAGSynthesizer
@@ -180,13 +182,21 @@ def _ingest_item(
 
     # Step 2: Curate into buckets
     print(f"  → Curating buckets...")
-    buckets = curation_engine.curate(comments, actor_names)
+    curation_result = curation_engine.curate(comments, actor_names)
+    buckets = curation_result["buckets"]
+    sentiment_counts = curation_result["sentiment_counts"]
 
     # Step 3: Synthesize summary (rolling RAG)
     print(f"  → Synthesizing summary...")
     summary = rag_synthesizer.synthesize(buckets, previous_summary)
 
-    # Step 4: Save to storage
+    # Step 4: Fetch poster (movies only)
+    poster_url = ""
+    if category == "movies":
+        print(f"  → Fetching poster from TMDB...")
+        poster_url = _fetch_tmdb_poster(item_name)
+
+    # Step 5: Save to storage
     data = {
         "title": item_name,
         "slug": slug,
@@ -194,7 +204,9 @@ def _ingest_item(
         "release_date": release_date,
         "last_updated_at": datetime.utcnow().isoformat(),
         "buckets": buckets,
+        "sentiment_counts": sentiment_counts,
         "summary": summary,
+        "poster_url": poster_url,
     }
 
     if actor_names:
@@ -210,6 +222,23 @@ def _ingest_item(
         "slug": slug,
         "comments_processed": len(comments),
     }
+
+
+def _fetch_tmdb_poster(movie_name: str) -> str:
+    """Fetch movie poster URL from TMDB API"""
+    if not TMDB_API_KEY:
+        return ""
+    try:
+        query = urllib.parse.urlencode({"api_key": TMDB_API_KEY, "query": movie_name})
+        url = f"{TMDB_BASE_URL}/search/movie?{query}"
+        with urllib.request.urlopen(url, timeout=5) as response:
+            data = json.loads(response.read())
+        results = data.get("results", [])
+        if results and results[0].get("poster_path"):
+            return f"{TMDB_IMAGE_BASE_URL}{results[0]['poster_path']}"
+    except Exception as e:
+        print(f"  TMDB poster fetch failed for '{movie_name}': {e}")
+    return ""
 
 
 def _create_slug(title: str) -> str:

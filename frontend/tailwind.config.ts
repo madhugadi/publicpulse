@@ -9,10 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#fafafa',
-        foreground: '#1a1a1a',
-        muted: '#6b7280',
-        border: '#e5e7eb',
+        background: '#f1f5f9',
+        foreground: '#0f172a',
+        muted: '#64748b',
+        border: '#e2e8f0',
+      },
+      fontFamily: {
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
       },
     },
   },

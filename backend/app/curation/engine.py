@@ -72,9 +72,10 @@ class CurationEngine:
     # PUBLIC API
     # ------------------------------------------------------------------
 
-    def curate(self, comments: List[str], actor_names: List[str] = None) -> Dict[str, List[str]]:
+    def curate(self, comments: List[str], actor_names: List[str] = None) -> Dict:
         """
-        Curate comments into structured buckets
+        Curate comments into structured buckets.
+        Returns buckets (curated themes) and sentiment_counts (raw comment counts per bucket).
         """
         classified = self._classify_comments(comments)
 
@@ -85,7 +86,14 @@ class CurationEngine:
             "resonates": self._extract_themes(classified["resonates"], "resonates"),
         }
 
-        return buckets
+        sentiment_counts = {
+            "working": len(classified["working"]),
+            "mixed": len(classified["mixed"]),
+            "concerns": len(classified["concerns"]),
+            "resonates": len(classified["resonates"]),
+        }
+
+        return {"buckets": buckets, "sentiment_counts": sentiment_counts}
 
     # ------------------------------------------------------------------
     # CLASSIFICATION

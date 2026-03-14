@@ -1,0 +1,28 @@
+{
+  "title": "Tata Harrier EV",
+  "slug": "tata-harrier-ev",
+  "category": "vehicles",
+  "release_date": null,
+  "last_updated_at": "2026-03-14T07:44:30.241164",
+  "buckets": {
+    "working": [
+      "Positive responses describe aspects such as best",
+      "Positive responses describe aspects such as comfortable",
+      "Positive responses describe aspects such as interior"
+    ],
+    "mixed": [],
+    "concerns": [
+      "Some viewers raise concerns around expensive",
+      "Some viewers raise concerns around issues"
+    ],
+    "resonates": []
+  },
+  "sentiment_counts": {
+    "working": 19,
+    "mixed": 1,
+    "concerns": 6,
+    "resonates": 1
+  },
+  "summary": "Hey, I've been keeping an eye on what people are saying about this vehicle. It seems like some things are really working well for them. A lot of people seem to really enjoy how comfortable it is to drive, and they appreciate the interior design. It's clear that those aspects have been a with the audience. On the other hand, there are some concerns that are starting to come up. Some viewers feel that it's a bit too pricey, and that might be a barrier for some people. Others are mentioning some issues they've encountered, but it's hard to say if those are isolated problems or a bigger pattern. It's interesting to see how people are reacting to this vehicle. While some are loving the comfort and interior, others are worried about the cost and potential issues. That's a pretty typical split, but it's still worth paying attention to what people are saying.",
+  "poster_url": ""
+}

@@ -10,6 +10,13 @@ export interface Item {
   category: string
   release_date?: string
   last_updated_at: string
+  poster_url?: string
+  sentiment_counts?: {
+    working: number
+    mixed: number
+    concerns: number
+    resonates: number
+  }
   buckets: {
     working: string[]
     mixed: string[]

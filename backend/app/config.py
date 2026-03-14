@@ -22,11 +22,16 @@ VEHICLES_DIR.mkdir(parents=True, exist_ok=True)
 # YouTube API
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "")
 
+# TMDB API (movie posters)
+TMDB_API_KEY = os.getenv("TMDB_API_KEY", "")
+TMDB_BASE_URL = "https://api.themoviedb.org/3"
+TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500"
+
 
 # LLM API (Groq only - Phase 0 locked)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
 GROQ_MODEL = "llama-3.1-8b-instant"  # Locked for Phase 0
-GROQ_TEMPERATURE = 0.2  # Deterministic, editorial-safe output
+GROQ_TEMPERATURE = 0.5  # Natural, conversational output
 
 # Ingestion limits
 MAX_VIDEOS_PER_QUERY = 3

@@ -3,18 +3,25 @@
   "slug": "dhurandhar",
   "category": "movies",
   "release_date": null,
-  "last_updated_at": "2026-01-21T19:52:24.800719",
+  "last_updated_at": "2026-03-14T07:44:11.795208",
   "buckets": {
     "working": [
-      "Positive responses describe aspects such as super",
-      "Positive responses describe aspects such as hit",
-      "Positive responses describe aspects such as blockbuster"
+      "Positive responses describe aspects such as music",
+      "Positive responses describe aspects such as mass",
+      "Positive responses describe aspects such as hit"
     ],
-    "mixed": [
-      "Mixed reactions mention lag"
-    ],
+    "mixed": [],
     "concerns": [],
-    "resonates": []
+    "resonates": [
+      "This appears to resonate with viewers interested in kids"
+    ]
   },
-  "summary": "It seems like audiences are really responding to the film's action-packed sequences. They're calling it a \"super hit\" and praising the way it keeps them on the edge of their seats. The high-energy scenes are clearly a highlight for many viewers.\n\nSome viewers are having trouble keeping up with the pacing, though. They mention that the film is a bit of a \"lag\" for them, and that it takes a little while to get into the rhythm of the story. It's not a universal complaint, but it's something that's coming up for a few people."
+  "sentiment_counts": {
+    "working": 10,
+    "mixed": 2,
+    "concerns": 0,
+    "resonates": 3
+  },
+  "summary": "So I've been keeping an eye on how audiences are reacting to this movie, and it's interesting to see what's really standing out. A lot of people seem to really enjoy the music in this film – it's been getting a lot of positive attention. Some viewers are also appreciating the visuals, saying they're really well done. There's a lot of praise for the action scenes, too – people are saying they're exciting and well-choreographed. It seems like this movie is really connecting with parents and caregivers, especially those with young kids. They're the ones who seem to be enjoying it the most, and they're recommending it to others in their situation. Not everyone is feeling that way, though – some viewers are saying it's not as engaging as they'd hoped. There's still some uncertainty about how the story is going to hold up, but so far, people seem to be enjoying the parts that are working.",
+  "poster_url": "https://image.tmdb.org/t/p/w500/jvAEt2mqWdY0sUNybtVFelRzMnZ.jpg"
 }
