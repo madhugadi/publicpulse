@@ -1,88 +1,64 @@
-# PublicPulse - Phase 0
+# 📰 PublicPulse
 
-Editorial intelligence platform that explains how audiences are reacting RIGHT NOW, using early public signals.
+**Understand how audiences are reacting to new releases right now, without the hype.**
 
-**NOT a ratings or review site.** This is a calm, balanced, editorial platform that reflects uncertainty and provides trust-first analysis.
+PublicPulse is an editorial intelligence platform. It reads early public reactions to new **movies** and **gadgets** and turns them into calm, balanced summaries: what people like, what's mixed, what concerns are starting to show up, and who it seems to resonate with.
 
----
+It is **not** a ratings or review site. There are no scores, no verdicts, and no critic reviews, just an honest picture of early reactions that always reflects how uncertain they are ("so far," "early reactions suggest").
 
-## Project Overview
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
+![Groq](https://img.shields.io/badge/LLM-Groq-F55036)
 
-### Categories (Phase 0 - LOCKED)
-- **Movies**: Understanding audience reactions to recent releases
-- **Gadgets**: Understanding reactions to recent tech releases
-
-### Core Philosophy
-- No ratings, scores, verdicts, or hype
-- No critic reviews
-- Calm, balanced, editorial tone
-- Always reflect uncertainty ("so far", "early reactions suggest")
-- Strengths and concerns must coexist
-- Never invent facts, trends, or names
-- Trust-first, explain-not-judge philosophy
+> **Status:** Phase 0 prototype, covering Movies and Gadgets.
 
 ---
 
-## Architecture
+## ✨ Features
 
-### Technology Stack
-
-**Backend:**
-- FastAPI (Python)
-- YouTube Data API (public comments)
-- Groq API with qwen/qwen-2.5-32b-instruct (LLM for synthesis)
-- File-based JSON storage
-
-**Frontend:**
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS
-- Server Components
+- **Early-signal analysis:** collects recent public comments from YouTube premiere, reaction, unboxing, and first-impression videos
+- **Balanced summaries:** sorts reactions into *what seems to be working*, *mixed responses*, *emerging concerns*, and *who it's resonating with*
+- **Rolling updates:** each new run blends the latest reactions with the previous snapshot, so summaries stay current without growing endlessly
+- **Trust first:** the LLM never invents facts, trends, or names, and strengths and concerns always appear side by side
+- **Token-efficient by design:** raw comments never go to the LLM, only a small curated set (9 points at most)
+- **Clean, calm UI:** separate Movies and Gadgets sections with a grid view and detail pages
 
 ---
 
-## Data Flow
+## 🏗️ How It Works
 
 ```
-1. INGESTION (Manual via Admin Endpoint)
-   ↓
-   YouTube API → Category-Specific Adapter
-   ↓
-   Fetch public comments (filtered by recency)
-
-2. CURATION (Rule-Based, No Embeddings)
-   ↓
-   Raw Comments → Keyword Matching
-   ↓
-   Structured Buckets:
-   - What seems to be working (MAX 3 items)
-   - Mixed responses (MAX 2 items)
-   - Emerging concerns (MAX 2 items)
-   - Who it seems to be resonating with (MAX 2 items)
-
-3. SYNTHESIS (Rolling RAG Snapshot)
-   ↓
-   Current + Previous Snapshot → LLM
-   ↓
-   Editorial Summary (4-5 paragraphs)
-
-4. STORAGE
-   ↓
-   JSON file per item (slug-based)
-
-5. FRONTEND
-   ↓
-   Next.js Server Components → REST API
-   ↓
-   Grid view + Detail pages
+ YouTube Data API ──► Category adapter (movies / gadgets)
+                              │   recent public comments
+                              ▼
+                     Rule-based curation (keyword themes)
+                              │   ≤ 3 working · ≤ 2 mixed · ≤ 2 concerns · ≤ 2 audience
+                              ▼
+          Previous snapshot + current buckets ──► Groq LLM (Llama 3.1 8B)
+                              │   4–5 paragraph editorial summary
+                              ▼
+                     JSON snapshot per item ──► FastAPI ──► Next.js frontend
 ```
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the full design and [QUICKSTART.md](QUICKSTART.md) for a fast setup.
 
 ---
 
-## Project Structure
+## 🧰 Tech Stack
+
+**Backend:** Python · FastAPI · YouTube Data API · Groq (Llama 3.1 8B Instant) · JSON file storage
+**Frontend:** Next.js 14 (App Router, Server Components) · TypeScript · Tailwind CSS
+**Deployment:** Docker
+
+---
+
+## 📁 Project Structure
 
 ```
-PublicPulse/
+publicpulse/
 ├── backend/
 │   ├── app/
 │   │   ├── adapters/          # Category-specific YouTube adapters
@@ -90,45 +66,27 @@ PublicPulse/
 │   │   │   ├── movies.py
 │   │   │   └── gadgets.py
 │   │   ├── curation/          # Rule-based bucketing engine
-│   │   │   ├── engine.py
-│   │   │   └── themes.py
 │   │   ├── rag/               # Rolling snapshot synthesizer
-│   │   │   └── synthesizer.py
 │   │   ├── storage/           # JSON file storage
-│   │   │   └── json_store.py
 │   │   ├── api/               # FastAPI routes
-│   │   │   ├── movies.py
-│   │   │   └── gadgets.py
 │   │   ├── config.py
 │   │   └── main.py            # FastAPI app
 │   ├── data/                  # JSON storage (git-ignored)
-│   │   ├── movies/
-│   │   └── gadgets/
 │   └── requirements.txt
 │
 ├── frontend/
-│   ├── app/                   # Next.js App Router
-│   │   ├── movies/
-│   │   │   ├── page.tsx
-│   │   │   └── [slug]/page.tsx
-│   │   ├── gadgets/
-│   │   │   ├── page.tsx
-│   │   │   └── [slug]/page.tsx
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── components/
-│   │   ├── Navigation.tsx
-│   │   ├── ItemGrid.tsx
-│   │   └── ItemCard.tsx
-│   └── lib/
-│       └── api.ts
+│   ├── app/                   # Next.js App Router (movies/, gadgets/, [slug] pages)
+│   ├── components/            # Navigation, ItemGrid, ItemCard
+│   └── lib/api.ts
 │
-└── README.md
+├── ARCHITECTURE.md
+├── QUICKSTART.md
+└── Dockerfile
 ```
 
 ---
 
-## Setup Instructions
+## 🚀 Getting Started
 
 ### Prerequisites
 - Python 3.10+
@@ -203,7 +161,7 @@ Frontend will run at `http://localhost:3000`
 
 ---
 
-## Usage
+## 🔌 Usage
 
 ### Running Ingestion (Manual)
 
@@ -331,6 +289,10 @@ The application is safe to deploy in read-only mode:
 - No UI libraries or state management
 
 ---
+
+## 👤 Author
+
+**Madhu** · [GitHub](https://github.com/madhugadi)
 
 ## License
 
